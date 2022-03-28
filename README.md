@@ -162,14 +162,6 @@ Master_SSL_Verify_Server_Cert: No
   - закрыт порт MySQL для исходящих соединений на slave-сервере;
   - закрыт порт MySQL для входящих соединений на master-сервере.
 
-Проверяем соединение:
-
-```sh
-$ telnet 10.1.0.11 3306
-Trying 10.1.0.11...
-telnet: connect to address 10.1.0.11: No route to host
-```
-
 Добавим правило на slave-сервере
 ```sh
 iptables -I OUTPUT -p tcp -m tcp --dport 3306 -j ACCEPT
