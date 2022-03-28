@@ -59,12 +59,12 @@ mysqldump --master-data -R -u root -p scoring > scoring_dumb.sql
 ```
 Разблокируем таблицы в консоли mysql:
 ```sh
-USE newdatabase;
+USE scoring;
 UNLOCK TABLES;
 ```
 ## Шаг 4. Создание базы на слейве
 ```sh 
-CREATE DATABASE newdatabase;
+CREATE DATABASE scoring;
 ```
 После этого загружаем дамп (из bash):
 ```sh 
