@@ -24,9 +24,9 @@ systemctl restart mysqld.service
 Создаем пользователя и даем ему права
 -`REPLICATION SLAVE` - привилегия позволяющая подключиться к серверу т запросить обновлённые на мастере данные;
 -`REPLICATION CLIENT` - привилегия, позволяющая использовать статистику:
-1.SHOW MASTER STATUS
-2.SHOW SLAVE STATUS
-3.SHOW BINARY LOGS
+1. SHOW MASTER STATUS
+2. SHOW SLAVE STATUS
+3. SHOW BINARY LOGS
 ```sh
 GRANT REPLICATION SLAVE, REPLICATION CLIENT ON *.* TO 'slave_user'@'<указываем ip адресс slave servera>' IDENTIFIED BY 'password';
 FLUSH PRIVILEGES;
